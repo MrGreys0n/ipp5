@@ -2,14 +2,10 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const port = 3000;
-const Pool = require('pg').Pool;
+const { Pool } = require('pg');
 
 const pool = new Pool({
-  user: 'postgres',
-  host: 'localhost',
-  database: 'phonenumbers',
-  password: '14092003',
-  port: 5432,
+  connectionString: 'postgres://txhhqhrc:dRaMlNDvxFlAKQlL_AOfqgHScWzQN6Lm@rain.db.elephantsql.com/txhhqhrc',
 });
 
 app.use(bodyParser.json());
